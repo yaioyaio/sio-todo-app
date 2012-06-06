@@ -35,7 +35,7 @@ Ext.define('MyApp.view.Todos', {
                 docked: 'top',
                 labelWidth: '0%',
                 placeHolder: 'New Task',
-                disabled: false
+                disabled: true
             },
             {
                 xtype: 'list',

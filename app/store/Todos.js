@@ -11,8 +11,7 @@
 Ext.define('MyApp.store.Todos', {
     extend: 'Ext.data.Store',
     requires: [
-        'MyApp.model.Todo',
-        "Ext.data.proxy.LocalStorage"
+        'MyApp.model.Todo'
     ],
 
     config: {
@@ -20,8 +19,10 @@ Ext.define('MyApp.store.Todos', {
         model: 'MyApp.model.Todo',
         storeId: 'todos',
         proxy: {
-            type: 'localstorage',
+            type: 'syncstorage',
             id: 'todos',
+            owner: 'user',
+            access: 'private'
         },
         autoLoad: true,  //set auto load to true so that any local data will 
                          // populated in memory
