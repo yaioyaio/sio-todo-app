@@ -10,7 +10,8 @@ Ext.define('MyApp.view.Todos', {
     
     requires: [
       "Ext.TitleBar",
-      "Ext.dataview.List"
+      "Ext.dataview.List",
+      "Ext.io.ux.AuthButton"
     ],
     
     config: {
@@ -23,6 +24,10 @@ Ext.define('MyApp.view.Todos', {
                 xtype: 'titlebar',
                 docked: 'top',
                 title: 'Todo',
+                items: [ {
+                    xtype: "sioAuthButton",
+                    align: "right"
+                }]
             },
             {
                 xtype: 'textfield',
