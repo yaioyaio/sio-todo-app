@@ -18,6 +18,9 @@
      *      }
      */
     "js": [
+       {
+            "path": "io/lib/socket.io.js"
+        },
         {
             "path": "sdk/sencha-touch.js"
         },  
